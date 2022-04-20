@@ -6,6 +6,7 @@
 #include <vector>
 #include <math.h>
 using namespace std;
+
 class Circle
 {   
 
@@ -30,11 +31,12 @@ public:
         cout << x << " " << y << " " << r << endl;
         
     }
-    
+
     ~Circle() {
         cout << "Destr " << this << endl;
 
     }
+
     
 };
 
@@ -72,24 +74,26 @@ public:
 
 
 class Complex {
-    double Re;
-    double Im;
+    double re;
+    double im;
 
 
 public:
-    Complex(double VRe, double VIm) {
+    Complex(double Vre, double Vim) {
         cout << "Const um " << this << endl;
-        Re = VRe;
-        Im = VIm;
-        cout << Re << " + i(" << Im << ")" << endl;
+        re = Vre;
+        im = Vim;
+        cout << re << " + i(" << im << ")" << endl;
     }
     Complex(const Complex& src) {
         cout << "Const kop " << this << endl;
-        this->Re = (src.Re);
-        this->Im = (src.Im);
+        this->re = (src.re);
+        this->im = (src.im);
         
-        cout << Re << " + i(" << Im << ")" << endl;
+        cout << re << " + i(" << im << ")" << endl;
     }
+
+    
     ~Complex() {
         cout << "Dest " << this << endl;
     }
